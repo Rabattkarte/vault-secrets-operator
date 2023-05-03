@@ -25,6 +25,7 @@ resource "vault_kubernetes_auth_backend_role" "dev" {
   token_period                     = 120
   token_policies = [
     vault_policy.db.name,
+    vault_policy.static.name,
   ]
   audience = "vault"
 }
